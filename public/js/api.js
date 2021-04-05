@@ -12,6 +12,7 @@ const API = {
   },
   async addExercise(data) {
     console.log(data)
+    // why is this here?
     const id = location.search.split("=")[1];
     console.log(id)
     const res = await fetch("/api/workouts/" + id, {

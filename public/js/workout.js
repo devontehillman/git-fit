@@ -1,3 +1,5 @@
+//const API = require("./api.js")
+
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);
@@ -80,5 +82,6 @@ function renderNoWorkoutText() {
   p.appendChild(strong);
   container.appendChild(p);
 }
+
 
 initWorkout();

@@ -7,18 +7,24 @@ const exerciseSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    excercises: [
+    {
     type: {
         type: String,
         trim: true,
-        required: "Enter a name for transaction"
+        required: "Excercise name not recoreded"
     },
     name: {
         type: String,
-        required: "Enter an amount"
+        required: "Enter an name"
     },
     duration: {
         type: Number,
         required: false,
+    },
+    distances: {
+        type: Number,
+        trim: true
     },
     weight: {
         type: Number,
@@ -31,8 +37,9 @@ const exerciseSchema = new Schema({
     sets: {
         type: Number,
         required: false,
-    },
-
+    }
+    }
+]
 
 });
 

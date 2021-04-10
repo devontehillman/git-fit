@@ -10,8 +10,10 @@ const API = {
 
     return json[json.length - 1];
   },
+
   async addExercise(data) {
-    console.log(data)
+    console.log(typeof(data))
+    console.log('dh4')
     // why is this here?
     const id = location.search.split("=")[1];
     console.log(id)
@@ -20,11 +22,12 @@ const API = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     });
-
+    console.log('dh5')
     const json = await res.json();
 
     return json;
   },
+
   async createWorkout(data = {}) {
     const res = await fetch("/api/workouts", {
       method: "POST",
